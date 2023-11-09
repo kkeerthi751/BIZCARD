@@ -63,3 +63,20 @@
 
 #### Step 3. Modification zone
 * In this **'Modification zone'** you can able to modify the information also you can delete the previous data
+
+  
+####How to Use
+Clone this repository.
+Install the required libraries using the pip install command.
+Set up your MySQL database credentials in the appropriate places in your script.
+Run the script BizCardX_main.py using the streamlit run command.
+Use the web interface to upload business card images, extract information, and manage the data.
+Screenshots
+Insert relevant screenshots of your application's interface and data extraction here.
+
+####Acknowledgements
+EasyOCR Documentation
+Python pandas documentation
+Python mysql-connector documentation
+Streamlit Documentation
+Feel free to contribute, report issues, or fork this repository.  

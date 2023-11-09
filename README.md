@@ -65,7 +65,7 @@
 * In this **'Modification zone'** you can able to modify the information also you can delete the previous data
 
   
-####How to Use
+###How to Use
 Clone this repository.
 Install the required libraries using the pip install command.
 Set up your MySQL database credentials in the appropriate places in your script.
@@ -74,7 +74,7 @@ Use the web interface to upload business card images, extract information, and m
 Screenshots
 Insert relevant screenshots of your application's interface and data extraction here.
 
-####Acknowledgements
+###Acknowledgements
 EasyOCR Documentation
 Python pandas documentation
 Python mysql-connector documentation

@@ -1,75 +1,52 @@
-# BizCardX-Extracting Business Card Data by using easyOCR
+# BizCardX - Extracting Business Card Data with OCR
 
-## Introduction
+BizCardX is a user-friendly tool for extracting information from business cards using Optical Character Recognition (OCR) technology. This project leverages the EasyOCR library to recognize text on business cards and extracts the data into a SQL database after classification using regular expressions. The extracted information is then accessible through a GUI built using Streamlit. The BizCardX application provides an intuitive interface for users to upload business card images, extract information, and manage the data within a database.
 
-* In today's fast-paced business environment, efficiently managing and organizing contact information is crucial for successful networking and communication. With the advent of digital tools and technologies, manual entry of business card details into a database can be time-consuming and prone to errors. To overcome these challenges, developers can leverage the power of optical character recognition (OCR) and databases to automate the process of extracting relevant information from business cards and storing it for easy access.
+## Project Overview
 
-* One powerful OCR library that facilitates the extraction of text from images is EasyOCR. EasyOCR is an open-source Python library that utilizes deep learning models to accurately recognize and extract text from various languages. By integrating EasyOCR with a MySQL database, developers can streamline the process of capturing business card data and storing it in a structured and organized manner.
+BizCardX aims to simplify the process of extracting and managing information from business cards. The tool offers the following features:
 
-## Developer Guide
+- Extraction of key information from business cards: company name, cardholder name, designation, contact details, etc.
+- Storage of extracted data in a MySQL database for easy access and retrieval.
+- GUI built with Streamlit for a user-friendly interface.
+- User options to upload, extract, and modify business card data.
 
+## Libraries/Modules Used
 
-### 1. Requirement Libraries to Install
+- `pandas`: Used to create DataFrames for data manipulation and storage.
+- `mysql.connector`: Used to store and retrieve data from a MySQL database.
+- `streamlit`: Used to create a graphical user interface for users.
+- `easyocr`: Used for text extraction from business card images.
 
-* pip install pandas easyocr numpy Pillow opencv-python-headless os re sqlalchemy mysql-connector-python streamlit
+## Workflow
 
-### 2.Import Libraries
+1. Install the required libraries using the command `pip install [Name of the library]`. Install `streamlit`, `mysql.connector`, `pandas`, and `easyocr`.
+2. Execute the `BizCardX_main.py` script using the command `streamlit run BizCardX_main.py`.
+3. The web application opens in a browser, presenting the user with three menu options: HOME, UPLOAD & EXTRACT, MODIFY.
+4. Users can upload a business card image in the UPLOAD & EXTRACT menu.
+5. The EasyOCR library extracts text from the uploaded image.
+6. Extracted text is classified using regular expressions to identify key information such as company name, cardholder name, etc.
+7. The classified data is displayed on the screen and can be edited by the user if needed.
+8. Clicking the "Upload to Database" button stores the data in a MySQL database.
+9. The MODIFY menu allows users to read, update, and delete data in the MySQL database.
 
-#### Scanning library
+## How to Use
 
-* import easyocr # (Optical Character Recognition)
-* import numpy as np
-* from PIL
-* from PIL import Image, ImageDraw
-* import cv2
-* import os
-* import re
+1. Clone this repository.
+2. Install the required libraries using the `pip install` command.
+3. Set up your MySQL database credentials in the appropriate places in your script.
+4. Run the script `BizCardX_main.py` using the `streamlit run` command.
+5. Use the web interface to upload business card images, extract information, and manage the data.
 
-#### Data frame libraries
+## Screenshots
 
-* import pandas as pd
-
-#### Database Library
-
-* import sqlalchemy
-* import mysql.connector
-* from sqlalchemy import create_engine, inspect
-
-#### Dashboard library
-
-* import streamlit as st
-
-### 3. E T L Process
-
-#### a) Extract data
-
-* Extract relevant information from business cards by using the easyOCR library
-
-#### b) Process and Transform the data
-
-* After the extraction process, process the extracted data based on Company name, Card Holder, Designation, Mobile Number, Email, Website, Area, City, State, and Pincode is converted into a data frame.
-
-#### c) Load data
-
-* After the transformation process, the data is stored in the MySQL database.
-
-## User Guide
-
-#### Step 1. Data collection zone
-* Click the **'Browse Files'** button and select an image
-
-#### Step 2. Data upload
-* Click the **'Upload to MySQL DB'** button to upload the data to the Mysql database
-
-#### Step 3. Modification zone
-* In this **'Modification zone'** you can able to modify the information also you can delete the previous data
-
-### Screenshots
 Insert relevant screenshots of your application's interface and data extraction here.
 
-### Acknowledgements
-EasyOCR Documentation
-Python pandas documentation
-Python mysql-connector documentation
-Streamlit Documentation
-Feel free to contribute, report issues, or fork this repository.  
+## Acknowledgements
+
+- [EasyOCR Documentation](https://github.com/JaidedAI/EasyOCR)
+- [Python `pandas` documentation](https://pandas.pydata.org/docs/)
+- [Python `mysql-connector` documentation](https://dev.mysql.com/doc/connector-python/en/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+
+Feel free to contribute, report issues, or fork this repository.
